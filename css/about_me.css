@@ -1,0 +1,31 @@
+/* About Me Section */
+#about_me{
+    height: 414px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left_aboutMe {
+    height: 60%;
+    width: 50%;
+    margin: 100px;
+    background: linear-gradient(135deg, #a445ff, #ff2e9d);
+    box-shadow: 0px 0px 25px rgba(255, 46, 157, 0.4);
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    border-radius: 20px;
+}
+
+
+
+.right_aboutMe {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(135deg, #a445ff, #ff2e9d);
+}
