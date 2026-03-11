@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SATYAM BEHERA</title>
+    <title>Satyam Behera | Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/about_me.css">
     <link rel="stylesheet" href="./css/projets.css">
@@ -11,106 +14,129 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
-    <!-- Nav Bar -->
-    <nav>
-        <div class="nav_left">
-            <p id="Left_navbar">SATYAM BEHERA</p>
-        </div>
-
-        <div class="nav_center">
+    <header>
+        <nav>
+            <a class="brand" href="#home">Satyam Behera</a>
             <ul class="nav_opt">
-                <li>home</li>
-                <li>about me</li>
-                <li>projects</li>
-                <li>contact me</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about_me">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact_me">Contact</a></li>
             </ul>
-        </div>
+            <a href="./assets/Satyam_Behera_Resume.pdf" download class="btn btn-primary">Download CV</a>
+        </nav>
+    </header>
 
-        <div class="nav_right">
-            <button><a href="./assets/Satyam_Behera_Resume.pdf" download class="cv_btn">Download CV</a></button>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <div class="left_main">
-            <div id="name_card">Satyam Behera</div>
-            <p>Experienced frontend developer with a passion for creating visually stunning and user-friendly websites.</p>
-            <a href="./assets/Satyam_Behera_Resume.pdf" download class="cv_btn">Download CV</a>
-            <a href="#" class="cv_btn">Hire Me</a>
+    <main id="home">
+        <section class="hero_left">
+            <p class="eyebrow">Frontend Developer • UI Engineer • Problem Solver</p>
+            <h1>Designing fast, modern websites that users genuinely enjoy.</h1>
+            <p class="hero_copy">
+                I build polished, responsive web experiences with clean code and a product mindset. From landing pages to full interfaces,
+                I focus on usability, performance, and visual quality.
+            </p>
+            <div class="hero_actions">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact_me" class="btn btn-secondary">Hire Me</a>
+            </div>
             <div class="social_card">
-                <a href="https://github.com/SatyamBehera23"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/satyam-behera23/"><i class="fa-brands fa-square-linkedin"></i></a>
-                <a href="https://www.instagram.com/behera_satyam03/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/dark_sideForyOU"><i class="fa-brands fa-x-twitter"></i></a>
+                <a aria-label="GitHub" href="https://github.com/SatyamBehera23"><i class="fa-brands fa-github"></i></a>
+                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/satyam-behera23/"><i class="fa-brands fa-linkedin"></i></a>
+                <a aria-label="Instagram" href="https://www.instagram.com/behera_satyam03/"><i class="fa-brands fa-instagram"></i></a>
+                <a aria-label="X" href="https://x.com/dark_sideForyOU"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
-            
-        </div>
-        
-        <div class="right_main">
+            <ul class="highlights">
+                <li><span>2+</span> years of coding practice</li>
+                <li><span>20+</span> UI components built</li>
+                <li><span>100%</span> responsive-first approach</li>
+            </ul>
+        </section>
 
+        <section class="hero_right">
             <div class="profile_img">
-                <img src="./assets/file.jpg" alt="Satyam">
+                <img src="./assets/file.jpg" alt="Portrait of Satyam Behera">
             </div>
-
-        </div>
+            <div class="floating_card">
+                <i class="fa-solid fa-code"></i>
+                <div>
+                    <p>Open to work</p>
+                    <small>Available for freelance & internships</small>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- About Me -->
-    <h1>About Me</h1>
-    <section id="about_me">
-        <div class="left_aboutMe">
-            <h1>My introduction</h1>
-            <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge frameworks and libraries,which allows me to implement interactive features. Additionally, I have experirence working with content management systems (CMS) like WordPress.</p>
-            <button type="button" id="abt_me_cv">Download CV<i class="fa-solid fa-circle-arrow-down"></i></button>
+    <section id="about_me" class="section">
+        <div class="section_heading">
+            <p>About Me</p>
+            <h2>Building interfaces that blend creativity and clarity</h2>
         </div>
-        <div class="right_aboutMe"></div>
+        <div class="about_grid">
+            <article class="about_card">
+                <h3>My Introduction</h3>
+                <p>
+                    I am a frontend developer skilled in HTML, CSS, JavaScript, and modern frameworks. I enjoy turning ideas into responsive,
+                    pixel-perfect, and accessible user experiences.
+                </p>
+                <p>
+                    I also have experience with CMS platforms like WordPress and can adapt quickly to new tools and team workflows.
+                </p>
+                <a href="./assets/Satyam_Behera_Resume.pdf" download class="btn btn-primary">Download CV</a>
+            </article>
+            <article class="skills_card">
+                <h3>Core Skills</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> HTML5, CSS3, JavaScript</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Responsive Web Design</li>
+                    <li><i class="fa-solid fa-circle-check"></i> UI Development & Design Systems</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Git, GitHub, Deployment workflows</li>
+                </ul>
+            </article>
+        </div>
     </section>
 
-    <!-- Projects -->
-    <h1>Projects</h1>
-    <section id="projects">
-        <div class="first_project"></div>
-        <div class="second_project"></div>
-        <div class="third_project"></div>
+    <section id="projects" class="section">
+        <div class="section_heading">
+            <p>Projects</p>
+            <h2>Selected work that reflects my development style</h2>
+        </div>
+        <div class="projects_grid">
+            <article class="project_card">
+                <h3>Portfolio Website Redesign</h3>
+                <p>A performance-focused personal portfolio with modern gradients, reusable components, and improved readability.</p>
+                <div class="tags"><span>HTML</span><span>CSS</span><span>UI/UX</span></div>
+            </article>
+            <article class="project_card">
+                <h3>Interactive Landing Page</h3>
+                <p>Crafted a conversion-friendly landing page with smooth interactions and a responsive layout for all breakpoints.</p>
+                <div class="tags"><span>JavaScript</span><span>Animation</span><span>Responsive</span></div>
+            </article>
+            <article class="project_card">
+                <h3>CMS Business Site</h3>
+                <p>Developed and customized a WordPress-based business website with scalable sections and easy content management.</p>
+                <div class="tags"><span>WordPress</span><span>SEO</span><span>Custom Theme</span></div>
+            </article>
+        </div>
     </section>
 
-    <!-- Contact Me -->
-    <h1>Contact Me</h1>     
-    <section id="contact_me">
-        <div class="left_contact_me"></div>
-        <div class="right_contact_me"></div>
+    <section id="contact_me" class="section">
+        <div class="section_heading">
+            <p>Contact</p>
+            <h2>Let’s create something meaningful together</h2>
+        </div>
+        <div class="contact_box">
+            <p>I am currently available for freelance projects, collaborations, and internship opportunities.</p>
+            <a class="btn btn-primary" href="mailto:satyambehera23@gmail.com">satyambehera23@gmail.com</a>
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer>
+        <p>© 2026 Satyam Behera. Crafted with focus and creativity.</p>
         <div class="socials">
-            <ul>
-                <li id="GitHub">
-                    <a href="https://github.com/SatyamBehera23">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-
-                <li id="LinkedIn">
-                    <a href="https://www.linkedin.com/in/satyam-behera23/">
-                        <i class="fa-brands fa-square-linkedin"></i>
-                    </a>
-                </li>
-
-                <li id="Instagram">
-                    <a href="https://www.instagram.com/behera_satyam03/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-
-                <li id="X">
-                    <a href="https://x.com/dark_sideForyOU">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                </li>
-            </ul>
+            <a href="https://github.com/SatyamBehera23"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/satyam-behera23/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/behera_satyam03/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/dark_sideForyOU"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </footer>
 </body>
