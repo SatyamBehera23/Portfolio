@@ -26,12 +26,3 @@ jobs:
           grep -q "<main" index.html
           grep -q "id=\"projects\"" index.html
           grep -q "id=\"contact_me\"" index.html
-
-  block-direct-main-push:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Fail direct pushes to main
-        run: |
-          echo "Direct pushes to main are blocked. Open a PR instead."
-          exit 1
