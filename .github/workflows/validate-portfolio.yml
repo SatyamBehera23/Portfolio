@@ -1,0 +1,37 @@
+name: Validate Portfolio
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required files
+        run: |
+          test -f index.html
+          test -f css/main.css
+          test -f css/about_me.css
+          test -f css/projets.css
+          test -f css/contact_me.css
+
+      - name: Basic HTML sanity check
+        run: |
+          grep -q "<main" index.html
+          grep -q "id=\"projects\"" index.html
+          grep -q "id=\"contact_me\"" index.html
+
+  block-direct-main-push:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail direct pushes to main
+        run: |
+          echo "Direct pushes to main are blocked. Open a PR instead."
+          exit 1

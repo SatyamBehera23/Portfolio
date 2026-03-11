@@ -1,5 +1,5 @@
 :root {
-    --bg: #080b1d;
+    --bg: #070b1c;
     --panel: #101735;
     --panel-soft: #121d44;
     --text: #f2f5ff;
@@ -7,6 +7,7 @@
     --primary: #8b5cf6;
     --accent: #ec4899;
     --border: rgba(255, 255, 255, 0.14);
+    --shadow: 0 10px 35px rgba(10, 13, 36, 0.55);
 }
 
 * {
@@ -22,16 +23,19 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text);
-    background: radial-gradient(circle at 20% -10%, #1b2d70, transparent 40%), var(--bg);
+    background:
+        radial-gradient(circle at 15% -20%, rgba(64, 126, 255, 0.35), transparent 45%),
+        radial-gradient(circle at 90% 8%, rgba(236, 72, 153, 0.22), transparent 28%),
+        var(--bg);
     line-height: 1.6;
 }
 
 header {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
     backdrop-filter: blur(14px);
-    background: rgba(8, 11, 29, 0.75);
+    background: rgba(8, 11, 29, 0.78);
     border-bottom: 1px solid var(--border);
 }
 
@@ -77,7 +81,7 @@ nav {
     border-radius: 12px;
     font-weight: 600;
     border: 1px solid transparent;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     display: inline-block;
 }
 
@@ -97,6 +101,10 @@ nav {
     background: rgba(255, 255, 255, 0.03);
 }
 
+.btn-secondary:hover {
+    border-color: rgba(236, 72, 153, 0.55);
+}
+
 main {
     width: min(1120px, 92%);
     margin: 3.4rem auto 0;
@@ -113,8 +121,9 @@ main {
 }
 
 .hero_left h1 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.15;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.1;
+    max-width: 16ch;
 }
 
 .hero_copy {
@@ -171,6 +180,7 @@ main {
     padding: 0.85rem;
     font-size: 0.9rem;
     color: var(--muted);
+    box-shadow: var(--shadow);
 }
 
 .highlights span {
@@ -187,11 +197,12 @@ main {
 }
 
 .profile_img {
-    width: min(360px, 80%);
+    width: min(390px, 85%);
     border-radius: 26px;
     border: 1px solid var(--border);
     padding: 0.6rem;
     background: linear-gradient(145deg, rgba(139, 92, 246, 0.4), rgba(236, 72, 153, 0.3));
+    box-shadow: var(--shadow);
 }
 
 .profile_img img {
@@ -212,11 +223,12 @@ main {
     display: flex;
     gap: 0.6rem;
     align-items: center;
+    box-shadow: var(--shadow);
 }
 
 .section {
     width: min(1120px, 92%);
-    margin: 4.6rem auto 0;
+    margin: 5rem auto 0;
 }
 
 .section_heading p {
@@ -261,6 +273,10 @@ footer p {
         text-align: center;
     }
 
+    .hero_left h1 {
+        max-width: none;
+    }
+
     .hero_actions,
     .social_card {
         justify-content: center;
@@ -286,5 +302,15 @@ footer p {
 
     .highlights {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
     }
 }
